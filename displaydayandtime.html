@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Display Day and Time</title>
+    </head>
+    <body>
+       <h1>Display Day and Time</h1>
+       
+        <script>
+            var d = new Date();
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+            
+            var n = weekday[d.getDay()];
+            document.write("Today  is: "+n);
+
+            document.write ("<br>");
+
+            var hours=d.getHours();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            var minites = d.getMinutes();
+            var seconds = d.getSeconds();
+            document.write("Current Time  is : "+ hours+"  "+ampm  +" : "+ minites +" : "+seconds);
+            
+
+        </script>
+        <br>
+    </body>
+ </html>
